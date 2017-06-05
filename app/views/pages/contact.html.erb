@@ -1,0 +1,36 @@
+<h3>Contact</h3>
+
+<div class="card z-depth-3">
+    <div class="card-content">
+        <p><strong>Do you wanna talk? Find me on the map.</strong></p>
+        <br />
+        <div id="map"></div>
+    </div>
+</div>
+
+
+<style>
+    #map {
+        height: 400px;
+        width: 100%;
+        }
+</style>
+
+<script>
+    function initMap() {
+    var uluru = {lat: -22.988050, lng: -43.192885};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+    }
+</script> 
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEe-Z0fkiq3gnx3LTK98etj9TGcdPITb8&callback=initMap">
+    </script>
+
